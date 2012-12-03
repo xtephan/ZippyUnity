@@ -5,6 +5,7 @@
 Library
 Temp
 obj
+Build 
 
 !Library/*.asset
 !Library/AssetImportState

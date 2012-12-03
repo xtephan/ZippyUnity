@@ -4,7 +4,8 @@ using System.Collections;
 public class MainGameScript : MonoBehaviour {
 	
 	//public objects
-	public GameObject Food;
+	public GameObject Food, Congrats;
+	public CharacterController Zippy;
 	
 	//Food Position
 	private int Score = 0;
@@ -51,6 +52,7 @@ public class MainGameScript : MonoBehaviour {
 	}
 	
 	private void GameOver() {
+		Instantiate( Congrats, Zippy.transform.position, Zippy.transform.rotation );
 	}
 	
 	
