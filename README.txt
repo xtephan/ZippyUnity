@@ -9,4 +9,4 @@ TODO:
 * TBA
 
 Known issues:
-* TBA
+* Chatacter does not collide with terrain
