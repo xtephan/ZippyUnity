@@ -6,7 +6,11 @@ My working environment:
 * MonoDevelop
 
 TODO:
-* TBA
+* Rotating Animation
+* Idle animation
 
 Known issues:
-* Chatacter does not collide with terrain
+* [ FIXED ] Chatacter does not collide with terrain
+* Chatacter walking is not animated
+* Character can not Eat
+* Viewing angle needs to be adjusted
