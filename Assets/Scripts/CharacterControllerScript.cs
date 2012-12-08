@@ -9,6 +9,7 @@ public class CharacterControllerScript : MonoBehaviour {
 	public float turningSpeed = 60;
     
 	private Vector3 moveDirection = Vector3.zero;
+	private Vector3 oldPosition = Vector3.zero;
     
 	void Update() {
         
@@ -20,6 +21,8 @@ public class CharacterControllerScript : MonoBehaviour {
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= speed;
 			
+			
+			
 			// Rotation
 			float horizontal = Input.GetAxis("Horizontal") * turningSpeed * Time.deltaTime;
 			transform.Rotate(0, horizontal, 0);
@@ -30,14 +33,15 @@ public class CharacterControllerScript : MonoBehaviour {
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
 		
+		
 	
-//		if(transform.position != oldPosition)
-//			transform.animation.Play();
-//		else {
-//			transform.animation.Stop();
-//		}
-//	
-//		oldPosition = transform.position;
+		if(transform.position != oldPosition)
+			transform.animation.Play();
+		else {
+			transform.animation.Stop();
+		}
+	
+		oldPosition = transform.position;
     }
 
 

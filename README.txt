@@ -12,6 +12,6 @@ TODO:
 Known issues:
 * [FIXED] Chatacter does not collide with terrain
 * [FIXED] Character does not rotate
-* Chatacter walking is not animated
+* [FIXED] Chatacter walking is not animated
 * [FIXED] Character can not Eat
 * Viewing angle needs to be adjusted
