@@ -15,3 +15,4 @@ Known issues:
 * [FIXED] Chatacter walking is not animated
 * [FIXED] Character can not Eat
 * Viewing angle needs to be adjusted
+* Camera Offset Values needto be adusted
