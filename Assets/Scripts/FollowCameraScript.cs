@@ -31,17 +31,7 @@ public class FollowCameraScript : MonoBehaviour {
 		transform.position = character.transform.position - (rotation * offset);
 		
 		transform.LookAt(character.transform);
-		
-//		// Compute what we want
-//		float currentAngle = transform.eulerAngles.y;
-//        float desiredAngle = character.transform.eulerAngles.y;
-//        float angle = Mathf.LerpAngle(currentAngle, desiredAngle, Time.deltaTime * damping);
-//        Quaternion rotation = Quaternion.Euler(0, angle, 0);
-//		
-//		// And do it :D
-//        transform.position = character.transform.position - (rotation * offset);
-//        transform.LookAt(character.transform);
-		
+			
 	}
 	
 	
