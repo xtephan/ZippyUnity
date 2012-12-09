@@ -7,15 +7,17 @@ public class MainGameScript : MonoBehaviour {
 	public GameObject Food, Congrats;
 	public CharacterController Zippy;
 	public GameObject TimeElapsedText;
+	public PauseMenuScript PauseMenu;
 	
 	//Food Position
 	private int Score = 0;
-
 	private float[,] FoodPos = new float[,]{ 	{ 122f, 31f, 167f }, 
 										  		{ 141f, 31f, 184f }, 
 												{ 195f, 31f, 152f }  };
 	
+	// Various Vars
 	private int TimeElapsed = 0;
+	private bool isPaused = false;
 	
 	
 	Vector3 NextFoodPosition() {
@@ -56,6 +58,21 @@ public class MainGameScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+		// If Escape is presed
+		if( Input.GetKeyUp(KeyCode.Escape) ) {
+		
+			if( isPaused ) {
+				isPaused = false;
+				Time.timeScale = 1;
+			} else { // If game is not Paused
+				isPaused = true;
+				Time.timeScale = 0;
+			}
+			
+			PauseMenu.ToggleVisibility();
+
+		}
+		
 	}
 	
 	// Update Time Ellapsed
