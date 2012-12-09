@@ -8,6 +8,8 @@ My working environment:
 TODO:
 * Rotating Animation
 * Idle animation
+* [IN PROGRESS] Pause Menu
+* Pause Menu Texture
 
 Known issues:
 * [FIXED] Chatacter does not collide with terrain
@@ -16,3 +18,5 @@ Known issues:
 * [FIXED] Character can not Eat
 * Viewing angle needs to be adjusted
 * Camera Offset Values needto be adusted
+* Pause Menu elements may not display corectly on different resolutions
+* Pause Menu Adjust Position
