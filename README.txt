@@ -1,5 +1,4 @@
-Zippy as a 3rd person game in Unity.
-Controled by user hand movements
+Zippy as a 3rd person game in Unity, controled by the user's hand movements, tracked by a Depth Sense camera from SoftKinetic.
 
 My working environment:
 * Windows 8 x64
@@ -12,19 +11,16 @@ My working environment:
 
 TODO:
 * [DONE] Basic tracking in sandbox scene
-* DepthView from SK in game
-* HandMash from SK in game
+* [DONE] DepthView from SK in game
+* [DONE] Character controled by hand movement
 * Menu Option for Depth and Hand to render or not
 * Gesture recognition
-* Character controled by hand movement
 * Rotating Animation
 * Idle animation
 * [PAUSED] Pause Menu
 * Pause Menu Texture
 
 Known issues:
-* Hand angles are very rough
-* Moving index should be adjustable in menu
 * [FIXED] Chatacter does not collide with terrain
 * [FIXED] Character does not rotate
 * [FIXED] Chatacter walking is not animated
