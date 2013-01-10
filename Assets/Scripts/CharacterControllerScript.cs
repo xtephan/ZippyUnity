@@ -11,10 +11,6 @@ public class CharacterControllerScript : MonoBehaviour {
 	private Vector3 moveDirection = Vector3.zero;
 	private Vector3 oldPosition = Vector3.zero;
 	
-	//Kinetic Data
-	public HandIisuInput HandInput1;
-	public GameObject HandViz1;
-    public GameObject HandViz2;
 	
 	//Should the Character Move Forward?
 	private float getForwardMovement() {
@@ -35,27 +31,16 @@ public class CharacterControllerScript : MonoBehaviour {
 	
 	void Update() {
 		
-		
-		
-		if(HandInput1.Detected)
-		{
-			HandData data = HandInput1.HandPositions;
-			
-			//Vector3 localPosition = new Vector3(data.PalmPosition.x, data.PalmPosition.y, data.PalmPosition.z);
-			
-			//Debug.Log("---" + data.PointingDirection);
-			
-			//setPalm(data);
-			
-			//Debug.Log(_palm.transform.rotation.x.ToString("F") + " xxx " + _palm.transform.rotation.y.ToString("F") + " xxx " + _palm.transform.rotation.z.ToString("F"));
-		}
         
 		CharacterController controller = GetComponent<CharacterController>();
 		
 		//Moving forward
 		float forwardMove=getForwardMovement();
+		
 		//Debug.Log(PlayerPrefs.GetFloat("RX").ToString("F")  + " xxx " + PlayerPrefs.GetFloat("RY").ToString("F") + " xxx " + PlayerPrefs.GetFloat("RZ").ToString("F"));
-		Debug.Log(PlayerPrefs.GetFloat("RY") + "--" + forwardMove);
+		
+		//Debug for forward movement
+		Debug.Log("RY EulearAngle=" + PlayerPrefs.GetFloat("RY") + "--" + forwardMove);
         
 		if (controller.isGrounded) {
             

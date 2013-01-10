@@ -15,9 +15,7 @@ public class HandVisualizer : MonoBehaviour {
 	public Transform[] _fingers;
 	public Transform _palm;
 	
-	// 1 - Left
-	// 2 - Right
-	public int HandID;
+	public int HandID; // 1 = Left Hand, 2 = Right Hand
 	
 	void Awake()
 	{
@@ -84,14 +82,12 @@ public class HandVisualizer : MonoBehaviour {
 		//and the PointingDirection as the up vector
 		_palm.LookAt(_palm.position + data.PalmDirection, data.PointingDirection);
 		
-		//Vector3 tst = _palm.position + data.PalmDirection;
 		//Debug.Log(_palm.eulerAngles.x.ToString("F") + " --- " + _palm.eulerAngles.y.ToString("F") + " --- " + _palm.eulerAngles.z.ToString("F"));
 		
 		if(HandID == 2) {
 				PlayerPrefs.SetFloat("RX",_palm.eulerAngles.x);
 				PlayerPrefs.SetFloat("RY",_palm.eulerAngles.y);
 				PlayerPrefs.SetFloat("RZ",_palm.eulerAngles.z);
-			//Debug.Log(_palm.eulerAngles.x.ToString("F") + " --- " + _palm.eulerAngles.y.ToString("F") + " --- " + _palm.eulerAngles.z.ToString("F"));
 		}
 	}
 	
@@ -113,25 +109,11 @@ public class HandVisualizer : MonoBehaviour {
 			
 			setPalm(data);
 			
-
-			
-			//Debug.Log(_palm.transform.rotation.x.ToString("F") + " xxx " + _palm.transform.rotation.y.ToString("F") + " xxx " + _palm.transform.rotation.z.ToString("F"));
-			
-			int cnt=0;
-			
 			for(int i=0; i<5; ++i)
 			{
 				setFinger(i, data);
-				
-				if(data.FingerStatus[i])
-					cnt++;
 			}
-			
-//			if(cnt>0)
-//				Debug.Log("Hand " + HandID + "has fingers");
-//			else
-//				Debug.Log("Hand " + HandID + " NOT has fingers");
-//			
+					
 		}
 		else
 		{
