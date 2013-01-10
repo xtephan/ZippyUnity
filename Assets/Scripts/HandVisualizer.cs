@@ -84,11 +84,31 @@ public class HandVisualizer : MonoBehaviour {
 		
 		//Debug.Log(_palm.eulerAngles.x.ToString("F") + " --- " + _palm.eulerAngles.y.ToString("F") + " --- " + _palm.eulerAngles.z.ToString("F"));
 		
+		// Save Euler Angles of the hand
 		if(HandID == 2) {
 				PlayerPrefs.SetFloat("RX",_palm.eulerAngles.x);
 				PlayerPrefs.SetFloat("RY",_palm.eulerAngles.y);
 				PlayerPrefs.SetFloat("RZ",_palm.eulerAngles.z);
 		}
+		
+		if(HandID == 1) {
+				PlayerPrefs.SetFloat("LX",_palm.eulerAngles.x);
+				PlayerPrefs.SetFloat("LY",_palm.eulerAngles.y);
+				PlayerPrefs.SetFloat("LZ",_palm.eulerAngles.z);
+		}
+		
+	}
+	
+	// In case the hand is not detected, dont use residual data
+	private void NullPrefs() {
+		
+		PlayerPrefs.SetFloat("LX",0);
+		PlayerPrefs.SetFloat("LY",0);
+		PlayerPrefs.SetFloat("LZ",0);
+		
+		PlayerPrefs.SetFloat("RX",0);
+		PlayerPrefs.SetFloat("RY",0);
+		PlayerPrefs.SetFloat("RZ",0);
 	}
 	
 	private void disableHandRenderers()
@@ -117,6 +137,8 @@ public class HandVisualizer : MonoBehaviour {
 		}
 		else
 		{
+			NullPrefs();
+			
 			if(_palm.renderer.enabled)
 				disableHandRenderers();
 		}
