@@ -4,8 +4,12 @@ using System.Collections;
 public class PauseMenuScript : MonoBehaviour {
 
 	
+	//private float wantedWalkingValue = PlayerPrefs.GetInt("WalkSensitivity");
+	//private float wantedTurningValue = PlayerPrefs.GetInt("TurnSensitivity");
+	
 	private float wantedWalkingValue = 10;
 	private float wantedTurningValue = 30;
+	
 	
 	public bool visibleMenu = false;
 	
@@ -28,6 +32,10 @@ public class PauseMenuScript : MonoBehaviour {
 		TurningSensitivityValueText.guiText.text = Mathf.Round(wantedTurningValue).ToString();
 		WalkingSensitivityValueText.guiText.text = Mathf.Round(wantedWalkingValue).ToString();
 	
+		
+		PlayerPrefs.SetInt("TurnSensitivity",Mathf.FloorToInt(wantedTurningValue));
+		PlayerPrefs.SetInt("WalkSensitivity",Mathf.FloorToInt(wantedWalkingValue));
+
 		
 		// Buttons
 		if (GUI.Button(new Rect(235, 150, 70, 30), "CANCEL"))

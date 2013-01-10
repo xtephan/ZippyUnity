@@ -17,8 +17,7 @@ Platform assembly: C:\Users\xtephan\Unity\ZippyUnity\Builds\SnowLevel_character_
 Loading C:\Users\xtephan\Unity\ZippyUnity\Builds\SnowLevel_character_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\xtephan\Unity\ZippyUnity\Builds\SnowLevel_character_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\Users\xtephan\Unity\ZippyUnity\Builds\SnowLevel_character_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.209 seconds
+- Completed reload, in  0.277 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
-XInput1_3.dll not found.
 <RI> Input initialized.
