@@ -11,15 +11,15 @@ My working environment:
 
 
 TODO:
-* Basic tracking in sandbox scene
-* DepthView from SK
-* HandMash from SK
+* [DONE] Basic tracking in sandbox scene
+* DepthView from SK in game
+* HandMash from SK in game
 * Menu Option for Depth and Hand to render or not
 * Gesture recognition
 * Character controled by hand movement
 * Rotating Animation
 * Idle animation
-* [IN PROGRESS] Pause Menu
+* [PAUSED] Pause Menu
 * Pause Menu Texture
 
 Known issues:
