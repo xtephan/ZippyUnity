@@ -20,4 +20,9 @@ public class HandData
 		FingerStatus = new bool[5];
 	}
 	
+	
+	void Update() {
+		Debug.Log("dasdsadsa");	
+	}
+	
 }

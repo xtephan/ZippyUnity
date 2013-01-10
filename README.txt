@@ -23,6 +23,8 @@ TODO:
 * Pause Menu Texture
 
 Known issues:
+* Hand angles are very rough
+* Moving index should be adjustable in menu
 * [FIXED] Chatacter does not collide with terrain
 * [FIXED] Character does not rotate
 * [FIXED] Chatacter walking is not animated
