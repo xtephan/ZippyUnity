@@ -77,6 +77,7 @@ public class CharacterControllerScript : MonoBehaviour {
 			
 			
 			// Rotation
+			//float horizontal = Input.GetAxis("Horizontal") * turningSpeed * Time.deltaTime;
 			float horizontal = horizontalMove * turningSpeed * Time.deltaTime;
 			transform.Rotate(0, horizontal, 0);
 			

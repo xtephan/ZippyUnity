@@ -25,7 +25,7 @@ Known issues:
 * [FIXED] Character does not rotate
 * [FIXED] Chatacter walking is not animated
 * [FIXED] Character can not Eat
-* Viewing angle needs to be adjusted
-* Camera Offset Values needto be adusted
+* [FIXED] Viewing angle needs to be adjusted
+* [FIXED] Camera Offset Values needto be adusted
 * Pause Menu elements may not display corectly on different resolutions
 * Pause Menu Adjust Position

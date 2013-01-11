@@ -11,7 +11,7 @@ public class MainGameScript : MonoBehaviour {
 	
 	//Food Position
 	private int Score = 0;
-	private float[,] FoodPos = new float[,]{ 	{ 122f, 31f, 167f }, 
+	private float[,] FoodPos = new float[,]{ 	{ 125f, 31f, 169f }, 
 										  		{ 141f, 31f, 184f }, 
 												{ 195f, 31f, 152f }  };
 	
